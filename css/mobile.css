@@ -1,0 +1,142 @@
+:root {
+    --bg-gradient: linear-gradient(to right, #062e10, #063106, #38280b, #2e2e09, #380c38, #420f18, #421717, #462828);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(138, 124, 124, 0.781);
+}
+
+.clock-container {
+    height: 300px;
+    width: 400px;
+    background-color: rgb(65, 33, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    box-shadow: inset 0 10px 10px rgb(229, 233, 17);
+    position: relative;
+    margin-top: 100px;
+    transform: scale(.5);
+}
+
+.clock-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -43px;
+    width: 45px;
+    height: 300px;
+    background: rgb(6, 46, 16);
+    z-index: 1;
+    background-image: var(--bg-gradient);
+    background-size: 200%;
+    animation: bg-anime 5s infinite alternate;
+}
+
+.clock-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -40.5px;
+    width: 45px;
+    height: 300px;
+    background: rgb(6, 46, 16);
+    background-image: var(--bg-gradient);
+    background-size: 200%;
+    animation: bg-anime 5s infinite alternate;
+}
+
+@keyframes bg-anime {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+.curly-brace {
+    margin: 0 0 30rem -300px;
+    font-size: 41.5rem;
+    color: rgb(6, 46, 16);
+    transform: rotate(270deg);
+}
+
+.clock {
+    padding: 1rem;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgb(17, 187, 40);
+    margin-left: -70px;
+}
+
+.ampm {
+    font-size: 1.5rem;
+}
+
+.stair {
+    color: #030000;
+    background-color: rgba(39, 39, 63, .2);
+}
+
+.stair1 {
+    height: 30px;
+    width: 490px;
+    border: 1px solid;
+    position: absolute;
+    top: 300px;
+}
+
+.stair2 {
+    height: 30px;
+    width: 490px;
+    border: 1px solid;
+    position: absolute;
+    top: 330px;
+    left: -10px;
+}
+
+.stair3 {
+    height: 30px;
+    width: 490px;
+    border: 1px solid;
+    position: absolute;
+    top: 360px;
+    left: 20px;
+}
+
+.stair4 {
+    height: 30px;
+    width: 490px;
+    border: 1px solid;
+    position: absolute;
+    top: 390px;
+    left: 50px;
+}
+
+.stair5 {
+    height: 30px;
+    width: 490px;
+    border: 1px solid;
+    position: absolute;
+    top: 420px;
+    left: 80px;
+}
+
+.stair6 {
+    height: 30px;
+    width: 490px;
+    border: 1px solid;
+    position: absolute;
+    top: 450px;
+    left: 110px;
+}
